@@ -64,7 +64,7 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
           AWS = aws_cloudfront_origin_access_identity.oai.iam_arn
         },
         Action   = "s3:GetObject",
-        Resource = "${module.s3.bucket_arn}/*" # 正: バケットのARNとオブジェクトパスを指定
+        Resource = "${var.bucket_arn}/*" # 正: バケットのARNとオブジェクトパスを指定
       },
     ]
   })
