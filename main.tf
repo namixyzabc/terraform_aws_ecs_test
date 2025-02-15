@@ -39,6 +39,9 @@ module "cloudfront" {
   bucket_regional_domain_name = module.s3.bucket_regional_domain_name
   acm_certificate_arn         = module.acm.acm_certificate_arn
   domain_name                 = var.domain_name
+ 
+  bucket_id = module.s3.bucket_id    # 追加
+  bucket_arn = module.s3.bucket_arn  # 追加
 }
 
 module "route53" {
