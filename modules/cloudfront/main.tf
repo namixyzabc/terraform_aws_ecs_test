@@ -52,7 +52,7 @@ resource "aws_cloudfront_origin_access_identity" "oai" {
 }
 
 resource "aws_s3_bucket_policy" "bucket_policy" {
-  bucket = module.s3.bucket_id # 正: バケット名を指定
+  bucket = var.bucket_id # 正: バケット名を指定
 
   policy = jsonencode({
     Version = "2012-10-17",
