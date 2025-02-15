@@ -31,14 +31,14 @@ variable "db_name" {
 variable "db_username" {
   description = "The username for the RDS database"
   type        = string
-  default     = "admin"
+  default     = "admin1234xyz"
 }
 
 variable "db_password" {
   description = "The password for the RDS database"
   type        = string
   sensitive   = true
-  default     = "passwordxyzabc123" # Replace with a strong password
+  default     = "password123xyzabc123" # Replace with a strong password
 }
 
 variable "cluster_name" {
