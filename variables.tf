@@ -13,7 +13,7 @@ variable "bucket_name" {
 variable "domain_name" {
   description = "The domain name for the website (e.g., example.com)"
   type        = string
-  default     = "test-domain-aws.click " # Replace with your domain name
+  default     = "test-domain-aws.click" # Replace with your domain name
 }
 
 variable "zone_id" {
