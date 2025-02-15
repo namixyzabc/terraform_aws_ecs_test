@@ -7,19 +7,19 @@ variable "region" {
 variable "bucket_name" {
   description = "The name of the S3 bucket for static website content"
   type        = string
-  default     = "my-static-website-bucket-20240110" # Replace with a unique name
+  default     = "my-static-website-bucket-createTimeStamp_20250215" # Replace with a unique name
 }
 
 variable "domain_name" {
   description = "The domain name for the website (e.g., example.com)"
   type        = string
-  default     = "example.com" # Replace with your domain name
+  default     = "test-domain-aws.click " # Replace with your domain name
 }
 
 variable "zone_id" {
   description = "The Route 53 hosted zone ID for the domain"
   type        = string
-  default     = "Z00000000000000000000" # Replace with your Route 53 hosted zone ID
+  default     = "Z042796721Y84FSGY7DJ4" # Replace with your Route 53 hosted zone ID
 }
 
 variable "db_name" {
@@ -38,7 +38,7 @@ variable "db_password" {
   description = "The password for the RDS database"
   type        = string
   sensitive   = true
-  default     = "password" # Replace with a strong password
+  default     = "passwordxyzabc123" # Replace with a strong password
 }
 
 variable "cluster_name" {
