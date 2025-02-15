@@ -12,3 +12,13 @@ variable "domain_name" {
   description = "The domain name for the distribution"
   type        = string
 }
+
+variable "bucket_id" {
+  description = "The ID of the S3 bucket"
+  type        = string
+}
+
+variable "bucket_arn" {
+  description = "The ARN of the S3 bucket"
+  type        = string
+}
