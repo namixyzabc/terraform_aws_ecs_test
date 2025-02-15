@@ -7,7 +7,7 @@ variable "region" {
 variable "bucket_name" {
   description = "The name of the S3 bucket for static website content"
   type        = string
-  default     = "my-static-website-bucket-createTimeStamp_20250215" # Replace with a unique name
+  default     = "my-static-website-bucket-createtimestmp-20250215" # Replace with a unique name
 }
 
 variable "domain_name" {
