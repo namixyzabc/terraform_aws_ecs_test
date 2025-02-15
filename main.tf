@@ -64,6 +64,12 @@ module "rds" {
   private_subnet_cidrs = var.private_subnet_cidrs
 }
 
+module "acm_alb" {
+  source      = "./modules/acm_alb"
+  domain_name = var.domain_name
+  zone_id     = var.zone_id
+}
+
 module "alb" {
   source = "./modules/alb"
 
