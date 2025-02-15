@@ -11,6 +11,15 @@ provider "aws" {
   region = var.region
 }
 
+# VPCモジュールの呼び出し
+module "vpc" {
+  source               = "./modules/vpc"
+  vpc_cidr             = var.vpc_cidr
+  public_subnet_cidrs  = var.public_subnet_cidrs
+  private_subnet_cidrs = var.private_subnet_cidrs
+  availability_zones   = var.availability_zones
+}
+
 module "s3" {
   source = "./modules/s3"
 
@@ -44,16 +53,19 @@ module "route53" {
 module "rds" {
   source = "./modules/rds"
 
-  db_name     = var.db_name
-  db_username = var.db_username
-  db_password = var.db_password
+  db_name             = var.db_name
+  db_username         = var.db_username
+  db_password         = var.db_password
+  vpc_id              = module.vpc.vpc_id
+  private_subnet_ids  = module.vpc.private_subnet_ids
+  private_subnet_cidrs = var.private_subnet_cidrs
 }
 
 module "alb" {
   source = "./modules/alb"
 
-  vpc_id               = var.vpc_id
-  public_subnet_ids    = var.public_subnet_ids
+  vpc_id               = module.vpc.vpc_id
+  public_subnet_ids    = module.vpc.public_subnet_ids
   certificate_arn      = module.acm.acm_certificate_arn
 }
 
@@ -61,12 +73,13 @@ module "ecs" {
   source = "./modules/ecs"
 
   cluster_name          = var.cluster_name
-  vpc_id                = var.vpc_id
-  public_subnet_ids     = var.public_subnet_ids
+  vpc_id                = module.vpc.vpc_id
+  public_subnet_ids     = module.vpc.public_subnet_ids
   alb_target_group_arns = [module.alb.target_group_arn]
+  alb_security_group_ids = [module.alb.alb_security_group_id]
   db_endpoint           = module.rds.db_endpoint
   db_name               = module.rds.db_name
   db_username           = module.rds.db_username
   db_password           = module.rds.db_password
+  region                = var.region
 }
-
