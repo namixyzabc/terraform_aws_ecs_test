@@ -21,7 +21,7 @@
         <mxCell id="H83YMFemYhTHk2rvLG6M-53" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=5;strokeColor=#FFD966;" vertex="1" parent="H83YMFemYhTHk2rvLG6M-11">
           <mxGeometry x="623" y="353.5" width="285" height="216" as="geometry" />
         </mxCell>
-        <mxCell id="H83YMFemYhTHk2rvLG6M-12" value="VPC" style="locked=1;" parent="0" visible="0" />
+        <mxCell id="H83YMFemYhTHk2rvLG6M-12" value="VPC" style="locked=1;" parent="0" />
         <mxCell id="H83YMFemYhTHk2rvLG6M-19" value="VPC" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;strokeColor=#879196;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#879196;dashed=0;" vertex="1" parent="H83YMFemYhTHk2rvLG6M-12">
           <mxGeometry x="370" y="287" width="1103" height="825" as="geometry" />
         </mxCell>
