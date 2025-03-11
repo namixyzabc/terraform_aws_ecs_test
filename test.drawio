@@ -1,205 +1,242 @@
-<mxGraphModel>
-  <root>
-    <mxCell id="0"/>
-    <mxCell id="1" parent="0"/>
-    <!-- 外部ユーザー -->
-    <mxCell id="2" value="外部ユーザー" style="aws4.user" vertex="1" parent="1">
-      <mxGeometry x="50" y="50" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- Browser -->
-    <mxCell id="3" value="" style="aws4.browser" vertex="1" parent="1">
-      <mxGeometry x="150" y="50" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- AWS Cloud コンテナ -->
-    <mxCell id="4" value="AWS Cloud" style="group;dashed=1;dashPattern=3 3;strokeColor=#666666;fillColor=none;" vertex="1" parent="1">
-      <mxGeometry x="100" y="150" width="800" height="600" as="geometry"/>
-    </mxCell>
-    <!-- CloudFront -->
-    <mxCell id="5" value="CloudFront" style="aws4.cloudfront" vertex="1" parent="4">
-      <mxGeometry x="200" y="200" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- WAF -->
-    <mxCell id="6" value="WAF" style="aws4.waf" vertex="1" parent="4">
-      <mxGeometry x="100" y="200" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- S3 -->
-    <mxCell id="7" value="S3" style="aws4.s3" vertex="1" parent="4">
-      <mxGeometry x="300" y="200" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- ACM -->
-    <mxCell id="8" value="ACM" style="aws4.acm" vertex="1" parent="4">
-      <mxGeometry x="50" y="200" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- ECR -->
-    <mxCell id="9" value="ECR" style="aws4.ecr" vertex="1" parent="4">
-      <mxGeometry x="400" y="200" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- Amplify -->
-    <mxCell id="10" value="Amplify" style="aws4.amplify" vertex="1" parent="4">
-      <mxGeometry x="100" y="300" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- NEXT.js -->
-    <mxCell id="11" value="NEXT.js" style="aws4.nextjs" vertex="1" parent="4">
-      <mxGeometry x="50" y="300" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- VPC コンテナ -->
-    <mxCell id="12" value="VPC" style="group;dashed=1;dashPattern=3 3;strokeColor=#666666;fillColor=none;" vertex="1" parent="4">
-      <mxGeometry x="200" y="350" width="600" height="300" as="geometry"/>
-    </mxCell>
-    <!-- Public Subnet -->
-    <mxCell id="13" value="Public Subnet" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="12">
-      <mxGeometry x="0" y="0" width="600" height="100" as="geometry"/>
-    </mxCell>
-    <!-- ALB -->
-    <mxCell id="14" value="セキュリティルール適用済み" style="aws4.alb" vertex="1" parent="13">
-      <mxGeometry x="250" y="20" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- IKW (Internet Gateway) -->
-    <mxCell id="15" value="IKW" style="aws4.internetGateway" vertex="1" parent="4">
-      <mxGeometry x="250" y="300" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- Private Subnet -->
-    <mxCell id="16" value="Private Subnet" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="12">
-      <mxGeometry x="0" y="200" width="600" height="100" as="geometry"/>
-    </mxCell>
-    <!-- ECS Cluster -->
-    <mxCell id="17" value="ECS Cluster (Docker + API)" style="aws4.ecs" vertex="1" parent="16">
-      <mxGeometry x="250" y="20" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- API Gateway -->
-    <mxCell id="18" value="API Gateway" style="aws4.apiGateway" vertex="1" parent="16">
-      <mxGeometry x="350" y="20" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- Lambda -->
-    <mxCell id="19" value="Lambda" style="aws4.lambda" vertex="1" parent="16">
-      <mxGeometry x="350" y="100" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- NAT Gateway -->
-    <mxCell id="20" value="NAT Gateway" style="aws4.natGateway" vertex="1" parent="16">
-      <mxGeometry x="450" y="20" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- RDS Proxy -->
-    <mxCell id="21" value="RDS Proxy" style="aws4.rdsProxy" vertex="1" parent="16">
-      <mxGeometry x="250" y="100" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- RDS -->
-    <mxCell id="22" value="RDS" style="aws4.rds" vertex="1" parent="16">
-      <mxGeometry x="250" y="180" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- ElastiCache -->
-    <mxCell id="23" value="ElastiCache (Redis)" style="aws4.elasticache" vertex="1" parent="16">
-      <mxGeometry x="350" y="180" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- CloudWatch Logs -->
-    <mxCell id="24" value="CloudWatch Logs" style="aws4.cloudwatchLogs" vertex="1" parent="4">
-      <mxGeometry x="50" y="400" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- EventBridge -->
-    <mxCell id="25" value="EventBridge" style="aws4.eventBridge" vertex="1" parent="4">
-      <mxGeometry x="50" y="500" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- SQS -->
-    <mxCell id="26" value="SQS" style="aws4.sqs" vertex="1" parent="4">
-      <mxGeometry x="50" y="600" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- Secrets Manager -->
-    <mxCell id="27" value="シークレットマネージャー" style="aws4.secretsManager" vertex="1" parent="4">
-      <mxGeometry x="150" y="400" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- Systems Manager -->
-    <mxCell id="28" value="Systems Manager" style="aws4.systemsManager" vertex="1" parent="4">
-      <mxGeometry x="150" y="500" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- Developer -->
-    <mxCell id="29" value="developer" style="aws4.user" vertex="1" parent="4">
-      <mxGeometry x="150" y="600" width="60" height="60" as="geometry"/>
-    </mxCell>
-    <!-- 接続 -->
-    <!-- 外部ユーザー → Browser -->
-    <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;" edge="1" parent="1" source="2" target="3">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- Browser <-> CloudFront -->
-    <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="1" source="3" target="5">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- CloudFront <-> S3 -->
-    <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="4" source="5" target="7">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- S3 <-> ECR -->
-    <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="4" source="7" target="9">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- CloudFront <-> WAF -->
-    <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="4" source="5" target="6">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- CloudFront <-> IKW -->
-    <mxCell id="edge6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="4" source="5" target="15">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- IKW <-> ALB -->
-    <mxCell id="edge7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="12" source="15" target="14">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- ALB <-> ECS Cluster -->
-    <mxCell id="edge8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="12" source="14" target="17">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- Amplify <-> NEXT.js -->
-    <mxCell id="edge9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="4" source="10" target="11">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- ECS Cluster <-> API Gateway -->
-    <mxCell id="edge10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="16" source="17" target="18">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- API Gateway <-> Lambda -->
-    <mxCell id="edge11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="16" source="18" target="19">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- ECS Cluster <-> CloudWatch Logs -->
-    <mxCell id="edge12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="4" source="17" target="24">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- ECS Cluster <-> EventBridge -->
-    <mxCell id="edge13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="4" source="17" target="25">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- ECS Cluster <-> SQS -->
-    <mxCell id="edge14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="4" source="17" target="26">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- ECS Cluster <-> Secrets Manager -->
-    <mxCell id="edge15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="4" source="17" target="27">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- ECS Cluster <-> RDS Proxy -->
-    <mxCell id="edge16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="16" source="17" target="21">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- RDS Proxy <-> RDS -->
-    <mxCell id="edge17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="16" source="21" target="22">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- RDS Proxy <-> ElastiCache -->
-    <mxCell id="edge18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="16" source="21" target="23">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- NAT Gateway → 外部API -->
-    <mxCell id="edge19" value="外部API" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;" edge="1" parent="16" source="20">
-      <mxGeometry relative="1" as="geometry">
-        <mxPoint x="500" y="100" as="targetPoint"/>
-      </mxGeometry>
-    </mxCell>
-    <!-- Systems Manager <-> Developer -->
-    <mxCell id="edge20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="4" source="28" target="29">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-    <!-- Systems Manager <-> NEXT.js -->
-    <mxCell id="edge21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;startArrow=classic;" edge="1" parent="4" source="28" target="11">
-      <mxGeometry relative="1" as="geometry"/>
-    </mxCell>
-  </root>
-</mxGraphModel>
+<mxfile host="app.diagrams.net" modified="2023-10-01T00:00:00.000Z" agent="Mozilla/5.0" version="14.0.0" etag="abc123" type="device">
+  <diagram id="diagram_1" name="Page-1">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Route53 -->
+        <mxCell id="route53" value="Route53" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/AWS-Route-53.8c4b3b3b8f6c8e9c8f6c8e9c8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- WAF -->
+        <mxCell id="waf" value="WAF" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/AWS-WAF.8c4b3b3b8f6c8e9c8f6c8e9c8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="150" y="50" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- CloudFront -->
+        <mxCell id="cloudfront" value="CloudFront" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Amazon-CloudFront.8c4b3b3b8f6c8e9c8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="250" y="50" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Amplify -->
+        <mxCell id="amplify" value="Amplify" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/AWS-Amplify.8c4b3b3b8f6c8e9c8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="350" y="50" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- API Gateway -->
+        <mxCell id="apigateway" value="API Gateway" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Amazon-API-Gateway.8c4b3b3b8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="450" y="50" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Lambda -->
+        <mxCell id="lambda" value="Lambda" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/AWS-Lambda.8c4b3b3b8f6c8e9c8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="550" y="50" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ALB -->
+        <mxCell id="alb" value="ALB" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Elastic-Load-Balancing.8c4b3b3b8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="650" y="50" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ECS -->
+        <mxCell id="ecs" value="ECS" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Amazon-ECS.8c4b3b3b8f6c8e9c8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="750" y="50" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ECR -->
+        <mxCell id="ecr" value="ECR" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Amazon-ECR.8c4b3b3b8f6c8e9c8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="750" y="150" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- EC2 (踏み台サーバー) -->
+        <mxCell id="ec2" value="EC2 (Bastion)" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Amazon-EC2.8c4b3b3b8f6c8e9c8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="650" y="150" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- NAT -->
+        <mxCell id="nat" value="NAT" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/NAT-Gateway.8c4b3b3b8f6c8e9c8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="550" y="150" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- RDS Proxy -->
+        <mxCell id="rdsproxy" value="RDS Proxy" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Amazon-RDS-Proxy.8c4b3b3b8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="450" y="150" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- RDS -->
+        <mxCell id="rds" value="RDS" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Amazon-RDS.8c4b3b3b8f6c8e9c8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="350" y="150" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ElastiCache (Redis) -->
+        <mxCell id="elasticache" value="ElastiCache (Redis)" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Amazon-ElastiCache.8c4b3b3b8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="250" y="150" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- S3 -->
+        <mxCell id="s3" value="S3" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Amazon-S3.8c4b3b3b8f6c8e9c8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="150" y="150" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- EventBridge -->
+        <mxCell id="eventbridge" value="EventBridge" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Amazon-EventBridge.8c4b3b3b8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- SQS -->
+        <mxCell id="sqs" value="SQS" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Amazon-SQS.8c4b3b3b8f6c8e9c8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="150" y="250" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- CloudWatch Logs -->
+        <mxCell id="cloudwatch" value="CloudWatch Logs" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/Amazon-CloudWatch.8c4b3b3b8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="250" y="250" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Systems Manager -->
+        <mxCell id="systemsmanager" value="Systems Manager" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/AWS-Systems-Manager.8c4b3b3b8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="350" y="250" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Secrets Manager -->
+        <mxCell id="secretsmanager" value="Secrets Manager" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/AWS-Secrets-Manager.8c4b3b3b8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="450" y="250" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ACM -->
+        <mxCell id="acm" value="ACM" style="shape=image;imageAspect=0;aspect=fixed;image=https://d1.awsstatic.com/webteam/architecture-icons/Q315/AWS-Certificate-Manager.8c4b3b3b8f6c8e9c8f6c8e9c.png" vertex="1" parent="1">
+          <mxGeometry x="550" y="250" width="60" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 接続定義 -->
+        <!-- Route53 -> WAF -->
+        <mxCell id="conn1" edge="1" parent="1" source="route53" target="waf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- WAF -> CloudFront -->
+        <mxCell id="conn2" edge="1" parent="1" source="waf" target="cloudfront">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- CloudFront -> Amplify -->
+        <mxCell id="conn3" edge="1" parent="1" source="cloudfront" target="amplify">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- CloudFront -> API Gateway -->
+        <mxCell id="conn4" edge="1" parent="1" source="cloudfront" target="apigateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- API Gateway -> Lambda -->
+        <mxCell id="conn5" edge="1" parent="1" source="apigateway" target="lambda">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- API Gateway -> ALB -->
+        <mxCell id="conn6" edge="1" parent="1" source="apigateway" target="alb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ALB -> ECS -->
+        <mxCell id="conn7" edge="1" parent="1" source="alb" target="ecs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ECS -> ECR -->
+        <mxCell id="conn8" edge="1" parent="1" source="ecs" target="ecr">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Lambda -> RDS Proxy -->
+        <mxCell id="conn9" edge="1" parent="1" source="lambda" target="rdsproxy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- RDS Proxy -> RDS -->
+        <mxCell id="conn10" edge="1" parent="1" source="rdsproxy" target="rds">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Lambda -> ElastiCache -->
+        <mxCell id="conn11" edge="1" parent="1" source="lambda" target="elasticache">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Lambda -> S3 -->
+        <mxCell id="conn12" edge="1" parent="1" source="lambda" target="s3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ECS -> RDS Proxy -->
+        <mxCell id="conn13" edge="1" parent="1" source="ecs" target="rdsproxy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ECS -> ElastiCache -->
+        <mxCell id="conn14" edge="1" parent="1" source="ecs" target="elasticache">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ECS -> S3 -->
+        <mxCell id="conn15" edge="1" parent="1" source="ecs" target="s3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- EventBridge -> SQS -->
+        <mxCell id="conn16" edge="1" parent="1" source="eventbridge" target="sqs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- SQS -> Lambda -->
+        <mxCell id="conn17" edge="1" parent="1" source="sqs" target="lambda">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Lambda -> CloudWatch Logs -->
+        <mxCell id="conn18" edge="1" parent="1" source="lambda" target="cloudwatch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ECS -> CloudWatch Logs -->
+        <mxCell id="conn19" edge="1" parent="1" source="ecs" target="cloudwatch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- EC2 -> ECS -->
+        <mxCell id="conn20" edge="1" parent="1" source="ec2" target="ecs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- NAT -> ECS -->
+        <mxCell id="conn21" edge="1" parent="1" source="nat" target="ecs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Systems Manager -> ECS -->
+        <mxCell id="conn22" edge="1" parent="1" source="systemsmanager" target="ecs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Secrets Manager -> Lambda -->
+        <mxCell id="conn23" edge="1" parent="1" source="secretsmanager" target="lambda">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Secrets Manager -> ECS -->
+        <mxCell id="conn24" edge="1" parent="1" source="secretsmanager" target="ecs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ACM -> CloudFront -->
+        <mxCell id="conn25" edge="1" parent="1" source="acm" target="cloudfront">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
