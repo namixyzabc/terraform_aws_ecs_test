@@ -1,9 +1,181 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0" version="26.1.0">
-  <diagram name="ページ1" id="_XjPDGSDLxxdWymQWe-5">
-    <mxGraphModel>
+<mxfile host="app.diagrams.net" modified="2025-03-18T00:00:00.000Z" agent="Mozilla/5.0" version="21.1.2" etag="abc123" type="device">
+  <diagram id="cloud-architecture" name="クラウドアーキテクチャ">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        
+        <!-- Main Container -->
+        <mxCell id="main-container" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="80" width="720" height="680" as="geometry" />
+        </mxCell>
+        
+        <!-- Browser -->
+        <mxCell id="browser" value="Browser" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;" vertex="1" parent="1">
+          <mxGeometry x="320" y="90" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- AWS Cloud -->
+        <mxCell id="aws-cloud" value="AWS Cloud" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="110" y="160" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- CloudFront -->
+        <mxCell id="cloudfront" value="CloudFront" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="320" y="160" width="80" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- External Component -->
+        <mxCell id="external" value="外部サービス/外部API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="430" y="160" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Amplify -->
+        <mxCell id="amplify" value="Amplify" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="110" y="210" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Security Components Left Side -->
+        <mxCell id="secrets-manager" value="Secrets Manager" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="110" y="390" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cloudwatch-logs" value="CloudWatch Logs" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="110" y="480" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="eventbridge" value="EventBridge" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="110" y="570" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="sns" value="SNS" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="110" y="660" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Center Components -->
+        <mxCell id="next" value="NEXT.js" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="240" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="graphql" value="GraphQL" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="320" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="security" value="セキュリティ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="320" y="410" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Right Components Top -->
+        <mxCell id="waf" value="WAF" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d80000;strokeColor=#A50040;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="400" y="210" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="acm" value="ACM" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d80000;strokeColor=#A50040;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="490" y="210" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="s3" value="S3" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="580" y="210" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ecr" value="ECR" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e3742f;strokeColor=#BD4807;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="670" y="210" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Circular Components -->
+        <mxCell id="cognito" value="Cognito" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="400" y="320" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="docker" value="Dockerイメージ" style="ellipse;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="610" y="300" width="100" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- Main Green Section -->
+        <mxCell id="green-section" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="200" y="480" width="550" height="160" as="geometry" />
+        </mxCell>
+        
+        <!-- Main Blue Section -->
+        <mxCell id="blue-section" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=50;" vertex="1" parent="1">
+          <mxGeometry x="200" y="650" width="550" height="100" as="geometry" />
+        </mxCell>
+        
+        <!-- ECR Related Components -->
+        <mxCell id="ecr-component" value="ECR 環境/イメージ" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e3742f;strokeColor=#BD4807;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="300" y="520" width="100" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="elb" value="ELB" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e3742f;strokeColor=#BD4807;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="450" y="520" width="60" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- API Section -->
+        <mxCell id="api-gateway" value="API Gateway" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e3742f;strokeColor=#BD4807;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="600" y="520" width="90" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="go" value="GO" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;strokeColor=#006EAF;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="450" y="600" width="60" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Bottom Components -->
+        <mxCell id="parameter-store" value="Parameter Store" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="330" y="660" width="120" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="elasticache-redis" value="ElastiCache/Redis" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="300" y="700" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="rds" value="RDS" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="400" y="700" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="api-proxy" value="API Proxy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="510" y="660" width="80" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="lambda" value="Lambda" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#e3742f;strokeColor=#BD4807;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="610" y="660" width="80" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Add connections (these would need to be refined based on exact connections in diagram) -->
+        <!-- Example connections -->
+        <mxCell id="conn1" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="browser" target="cloudfront">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="400" as="sourcePoint" />
+            <mxPoint x="440" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn2" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cloudfront" target="next">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="400" as="sourcePoint" />
+            <mxPoint x="440" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn3" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="next" target="waf">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="400" as="sourcePoint" />
+            <mxPoint x="440" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Add more connections to match your diagram -->
+        <!-- Cloud bubble -->
+        <mxCell id="external-cloud" value="外部連携先" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Developer Icon -->
+        <mxCell id="developer" value="" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="80" y="700" width="40" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dev-label" value="developer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="760" width="60" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
